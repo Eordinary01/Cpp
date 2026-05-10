@@ -1,18 +1,20 @@
 #include <iostream>
 using namespace std;
 
-int main (){
-    int n1=0, n2=1, n3,number,i;
+int main()
+{
+    int a = 0, b = 1, temp, number, i;
 
-    cout<<"Enter the number of terms:";
-    cin>>number;
-    cout<<"Fibonnaci Series:";
-    cout<<n1<<", "<<n2<<", ";
-    for(i=2;i<=number;i++){
-        n3=n1+n2;
-        cout<<n3<<", ";
-        n1=n2;
-        n2=n3;
+    cout << "Enter the limit to calculate Fibonacci series:";
+    cin >> number;
+    cout << "Fibonnaci Series:";
+    // cout << a << ", " << b << ", ";
+    for (i = 0; i <= number; i++)
+    {
+        temp = a + b;
+        cout << temp << ", ";
+        a = b;
+        b = temp;
     }
-    return 0; 
+    return 0;
 }
